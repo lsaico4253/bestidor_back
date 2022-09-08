@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "generos",
+  "info": {
+    "name": "Genero"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "genero": {
+      "type": "string",
+      "required": true
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "categories": {
+      "collection": "category",
+      "via": "generos",
+      "dominant": true
+    }
+  }
+}

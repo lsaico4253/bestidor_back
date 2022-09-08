@@ -64,6 +64,10 @@
     },
     "lastname": {
       "type": "string"
+    },
+    "products": {
+      "via": "vendedor",
+      "collection": "product"
     }
   }
 }
